@@ -576,8 +576,8 @@ async def start_private(message): #, **kwargs
             f(f"privates.{user_id}.start",True)
             keyboard = types.InlineKeyboardMarkup()
 
-            callback_button = types.InlineKeyboardButton(text="Botu grubuna ekle 👪", url="https://t.me/BakuGameBot?startgroup=a")
-            callback_button2 = types.InlineKeyboardButton(text="Destek ve İletişim ⚙️", url="https://t.me/sessizbaku")
+            callback_button = types.InlineKeyboardButton(text="Botu grubuna ekle 👪", url="https://t.me/oyungametelegram")
+            callback_button2 = types.InlineKeyboardButton(text="Destek ve İletişim ⚙️", url="https://t.me/oyungametelegram")
             keyboard.add(callback_button)
             keyboard.add(callback_button2)
             await bot.send_message(chat_id, f'<b>Best</b> oyun botuna hoş geldin.\n\nBen bir oyun botuyum.🎮\n\nÇeşitli oyunlar oynamak ve eğlenceli vakit geçirmek için benimle oynayabilirsin 🎉\n\nBenimle oynamak için beni bir gruba eklemen lazım.',  reply_markup=keyboard)
@@ -1972,11 +1972,11 @@ async def callback_inline(cagri): #çağrıcı cagrici
     
 
     if sql_get(f"SELECT * FROM ban_listesi WHERE id LIKE '{chat_id}'") != []:
-        await bot.send_message(chat_id, "⚠️ Grup bot tarafından engellenmiştir. İtiraz etmek istiyorsanız: @OctopusGameSahip")
+        await bot.send_message(chat_id, "⚠️ Grup bot tarafından engellenmiştir. İtiraz etmek istiyorsanız: @rahatsizetmeyiniz34")
         await bot.leave_chat(chat_id)
         return
     elif sql_get(f"SELECT * FROM ban_listesi WHERE id LIKE '{user_id}'") != []:
-        await bot.answer_callback_query(cagri.id, '⚠️ Bottan engellendiniz. İtiraz etmek istiyorsanız: @OctopusGameSahip', show_alert=True)
+        await bot.answer_callback_query(cagri.id, '⚠️ Bottan engellendiniz. İtiraz etmek istiyorsanız: @rahatsizetmeyiniz34', show_alert=True)
         return
 
     sorgu = cagri.data
