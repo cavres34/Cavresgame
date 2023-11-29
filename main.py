@@ -47,13 +47,13 @@ bot_adi = ""
 if hex(getnode()) in ["0xdc7b23bb434e"]: #windows masaüstü pc ise veya laptop
     #kaç yaşındasın bot
     print("kyb")
-    bot_adi = "cavresgamebot"
-    bot_token = "6398477535:AAG2JDIkMw4bw6wIh-qIC8RhUTiJduQGp3Q"
+    bot_adi = "gametelegram"
+    bot_token = "6718278324:AAEPLJvFB9o8eL9ZeHaME69oVD5j89CUJKE"
     bot = AsyncTeleBot(bot_token, parse_mode="html")
 else:
     #sıl octopus bot
-    bot_adi = "cavresgamebot"
-    bot_token = "6398477535:AAG2JDIkMw4bw6wIh-qIC8RhUTiJduQGp3Q"
+    bot_adi = "gametelegram"
+    bot_token = "6718278324:AAEPLJvFB9o8eL9ZeHaME69oVD5j89CUJKE"
     bot = AsyncTeleBot(bot_token, parse_mode="html")
 
 temp = {}
@@ -513,7 +513,7 @@ async def log_gonder(**kwargs):
 
 
     try:
-        await bot.send_message(-1001915718534, f"""
+        await bot.send_message(--1001915718534, f"""
 <b> ~~ 📢 New Log ~~</b>
 
 Oyun sayısı: <code>{len(oyunlar)}</code>
@@ -534,7 +534,7 @@ Eylem: <code>{kwargs.get('eylem','')}</code>
         #else:
         #    bot.send_message(kurucu_id, str(e))
     try:
-        await bot.set_chat_title(-1001915718534, f"cavres Game Log - {len(oyunlar)}")
+        await bot.set_chat_title(---1001915718534, f"cavres Game Log - {len(oyunlar)}")
     except Exception as e:
         if "chat not found" in str(e):
             pass
